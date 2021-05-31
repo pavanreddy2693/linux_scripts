@@ -1,0 +1,148 @@
+Listing contents
+
+ls : list  contents
+ls -a : list all contents along with hidden files / directories
+ls -l : list the contents with additional info related to files / directories
+ls -al : list all the contents with addition info 
+
+
+Creating a file:
+
+Using vim or vi:
+
+vi filename: 
+which opens up a vi editor to enter the text. 
+In order to save the file, press ESC and :wq to save. 
+In order to exit without saving, press ESC and :q to quit
+
+
+Using nano:
+
+nano filename:
+which opens up a nano editor to enter the text.
+In order to save the file, enter Control + O
+In order to exit without save, enter Control + X
+
+
+Using touch:
+
+touch filename: Which creates a file with empty content
+
+
+Display the information in the file
+
+cat filename : displays the content that resides in a file
+cat file1 file2 file3 : displays the content of all 3 files
+cat * : display the content of all files of the current directory / folder
+
+
+
+
+
+Creating Directories:
+
+mkdir dir_name
+mkdir dir1 dir2 dir 3
+mkdir -p /public/stylesheets/test
+
+
+Renaming a file/folder:
+
+mv oldname newname
+
+Note: Can use mv command to move the file to a different location
+
+EG: mv filname /tmp/sub/filename
+
+
+Current working Directory : pwd
+Change to prev. Directory: cd ..
+To move to other directory: cd Dirname(path)
+
+Relative paths wont have / ( from within directories )
+Absolute paths have / infront of the path ( from root )
+
+
+Removing Files or folders:
+
+rm filename/ foldername
+rm -rf filename/foldername
+
+
+
+File permissions:
+Every file or folder is assigned with a set of permission at user, group and others levels with Read, Write and Executable permissions.
+
+enter ls -al command to see the file permissions.
+
+drwxr-xr-x    5 pavankumar.k  staff       160 Nov  9 20:14 node_modules
+-rw-r--r--    1 pavankumar.k  staff        13 Feb 18 18:56 nodehosts
+
+
+The first colomn in the above examples defines file permissions.
+
+It can be divided into d( file type )  rwx ( user permissions ) r-x ( group permissions ) r-x ( others permissions )
+
+
+The second colomn defines the block storage
+
+the third colomn defines the user/owner of the file/directory
+
+the fourth colom defines the group attached to the file / folder
+
+the fifth colom defines the time stamp
+
+the six colom defines the file/directory name
+
+
+The file permissions can be added or removed using chmod command:
+
+EG: chmod +x filename
+
+
+Operator used:
+
++ to add additional
+- to revoke or remove
+= to assign a specific set of permissions
+
+The Numerical format to assign permissions
+0 for no permissions.
+1 for execute.
+2 for write.
+3 for execute and write.
+4 for read.
+5 for execute and read.
+6 for write and read.
+7 for execute, write, and read.
+
+
+EG: chmod 754 filename
+
+which means user has (rwx)
+group has ( r-x)
+others  has ( r--) permissions
+
+
+
+
+Changing the ownership of a file
+
+chown newuser filename
+
+
+Changing groupname to a file
+
+chgrp newgrp filename
+
+
+changing both owner and group of a file
+
+chown newuser:newgrp filename
+
+
+
+
+
+
+

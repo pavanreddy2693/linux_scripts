@@ -9,7 +9,7 @@ echo "go the code folder"
 
 cd $code_path
 
-echo "provide the branch name"
+echo "provide the branch name..."
 read branch_name
 
 
